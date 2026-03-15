@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:18.1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+
+    ports:
+      - "55432:5432"
+    volumes:
+      - ec_api_db_data:/var/lib/postgresql/18/docker
+volumes:
+  ec_api_db_data:
